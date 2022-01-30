@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test1</title>
+    <script>
+        function down1()
+        {
+            var url="http://192.168.1.1?pin=ON2";
+            var request = new XMLHttpRequest();
+            request.open("POST",url);
+            request.send("test ok");
+            console.log("test ok\n");
+        }
+        function down2()
+        {
+            var url="http://192.168.1.1?pin=OFF2";
+            var request1 = new XMLHttpRequest();
+            request1.open("POST",url);
+            request1.send("test ok");
+            console1.log("test ok\n");
+        }
+    </script>
+    <style>
+        .but{
+            width: 200px;
+            height: 50px;
+            background-color: aqua;
+        }
+        .opt{
+            height: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <button onmousedown="down2()" onmouseup="" class="but">打开</button>
+    </div>
+    <div>
+        <p class="opt"></p>
+    </div>
+    <div>
+        <button onmousedown="down1()" onmouseup="" class="but">关闭</button>
+    </div>
+    
+</body>
+</html>
+
+
